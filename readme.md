@@ -9,8 +9,10 @@ Predloha z alzy:
 ![Predloha alza.cz](./docs/alza.png)
 
 Finalni Produkt: (21.2.2026)
-<video src="./docs/result_1/result.mp4" controls width="600"></video>
 ![Finalni Produkt 21.2.2026](./docs/result_1/result.png)
+
+Porovnani v ruznych sirkach:
+![gif Porovnani v ruznych sirkach](./docs/result_1/result.gif)
 
 
 Finalni Produkt; 1440px sirka
