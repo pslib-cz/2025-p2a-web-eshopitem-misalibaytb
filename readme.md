@@ -12,7 +12,7 @@ Finalni Produkt: (21.2.2026)
 ![Finalni Produkt 21.2.2026](./docs/result_1/result.png)
 
 Porovnani v ruznych sirkach:
-![gif Porovnani v ruznych sirkach](./docs/result_1/result.gif)
+![gif Porovnani v ruznych sirkach](./docs/result_1/result.webp)
 
 
 Finalni Produkt; 1440px sirka
