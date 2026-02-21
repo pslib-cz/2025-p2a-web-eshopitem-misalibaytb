@@ -1,11 +1,27 @@
 .container {
     width: 100%;
+    box-sizing: border-box;
     max-width: 1200px;
+    /* alignuje rodica */
     margin: 0 auto;
     display: grid;
     gap: 2rem;
-    grid-template-columns: repeat(auto-fit, minmax(271px, 1fr));
-    padding-top: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    padding: 0.5rem;
+    /* alignuje obsag na stred bez toho by to byki na levo a to by nebylo hezke */
+    justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 240px));
+    }
+}
+
+.product-card {
+    display: grid;
+    grid-template-rows:
+        auto auto auto 1fr auto;
 }
 
 .product-header {
@@ -15,11 +31,11 @@
 }
 
 .product-image {
-    width: 100%;
-    padding: 1rem;
+    display: block;
+    width: 210px;
+    height: 210px;
     box-sizing: border-box;
-    height: auto;
-    object-fit: cover;
+    object-fit: contain;
     margin: 0 auto;
 }
 
@@ -29,10 +45,10 @@
     right: -120px;
     top: 20px;
     color: #fff;
-    background-color: #00bf2d;
+    background-color: #a1c900;
     line-height: 11px;
     width: 300px;
-    padding: 0.5rem;
+    padding: 0.3rem;
     transform: rotate(45deg);
     text-align: center;
 }
@@ -60,6 +76,29 @@
     border-radius: 25px;
     font-size: 0.8rem;
     font-weight: bold;
+}
+
+.product-tag_whathifi {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 64px;
+    height: 64px;
+
+    background: #d40000;
+    color: white;
+
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.whathifi-star {
+    font-size: 2rem;
+}
+
+.whathifi-text {
+    font-size: 0.55rem;
 }
 
 .product-tag_interest {
@@ -93,4 +132,134 @@
 .product-tag_interest-text:last-child {
     padding: 0;
     margin: 0;
+}
+
+
+.product-rating {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+
+.product-rating-stars-wrapper {
+    width: fit-content;
+    text-decoration: none;
+}
+
+.product-rating-stars {
+    display: flex;
+    gap: 0.1rem;
+    color: #ffb400;
+    font-size: 1.5rem;
+    width: fit-content;
+    overflow: hidden;
+}
+
+.product-rating-value {
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.product-rating-value small {
+    font-size: 0.7rem;
+    color: #a4a4a4;
+    text-decoration: underline;
+}
+
+.product-compare {
+    margin-left: auto;
+    color: #d2d2d2;
+}
+
+.product-compare:hover {
+    color: #2f8dcd;
+}
+
+.product-wishlist {
+    color: #d2d2d2;
+}
+
+.product-wishlist:hover {
+    color: #f00000;
+}
+
+.product-body {
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: 2 / 5;
+}
+
+.product-name {
+    font-size: 1.1rem;
+    color: #00275a;
+    margin: 0.5rem 0;
+    text-decoration: none;
+}
+
+.product-name:hover {
+    text-decoration: underline;
+}
+
+.product-description {
+    font-size: 0.9rem;
+    color: #4a5a64;
+    line-height: 1.5;
+    font-size: 12px;
+    margin: 0.5rem 0;
+}
+
+.product-footer {
+    display: grid;
+    gap: .5rem;
+    padding-top: .5rem;
+}
+
+.product-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: .75rem;
+}
+
+.product-price {
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+    min-width: 0;
+}
+
+.product-price-once {
+    color: #d14546;
+    font-weight: 700;
+    font-size: 1.2rem;
+    line-height: 1.1;
+    align-items: baseline;
+}
+
+.product-price-rental {
+    color: #8a8a8a;
+    font-size: .8rem;
+    line-height: 1.2;
+}
+
+.product-button {
+    white-space: nowrap;
+    padding: .45rem .6rem;
+    border: 1px solid #bdbdbd;
+    background: linear-gradient(#f7f7f7, #e7e7e7);
+    border-radius: 3px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.product-stock {
+    text-align: center;
+    color: #2a8a1f;
+    font-weight: 700;
+    font-size: .95rem;
+}
+
+.product-stock:hover {
+    text-decoration: underline;
 }
