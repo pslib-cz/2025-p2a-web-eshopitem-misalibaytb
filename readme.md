@@ -1,21 +1,32 @@
 # 2025-p2a-web-eshopitem-misalibaytb
 
-Simple graphical copy of [Alza.cz](https://alza.cz/).
+Prosta kopie [Alza.cz](https://alza.cz/) obchodu.
 
 Live here:
 https://pslib-cz.github.io/2025-p2a-web-eshopitem-misalibaytb/
 
+Predloha z alzy:
+![Predloha alza.cz](./docs/alza.png)
+
+Finalni Produkt: (21.2.2026)
+<video src="./docs/result_1/result.mp4" controls width="600"></video>
+![Finalni Produkt 21.2.2026](./docs/result_1/result.png)
 
 
-Structure:
-src: 
-    - assets:
-        - css
-        - images
-    - components - components fir product cards, etc.
-    - main.tsx - entry point to page
+Finalni Produkt; 1440px sirka
+![Finalni Produkt; 1440px sirka](./docs/result_1/1440.png)
 
+Finalni Produkt; 1024px sirka
+![Finalni Produkt; 1024px sirka](./docs/result_1/1024.png)
 
-## for teachers 
-if i dont forget to update this damn file i will describe all files in this project.
-And sorry that i dont use simple html if there is problem with it i can redo it in plain html, but if you dont mind i would rather use react.
+Finalni Produkt; 768px sirka
+![Finalni Produkt; 768px sirka](./docs/result_1/768.png)
+
+Finalni Produkt; 425px sirka
+![Finalni Produkt; 425px sirka](./docs/result_1/425.png)
+
+Finalni Produkt; 375px sirka
+![Finalni Produkt; 375px sirka](./docs/result_1/375.png)
+
+Finalni Produkt; 320px sirka
+![Finalni Produkt; 320px sirka](./docs/result_1/320.png)
