@@ -13,6 +13,7 @@ type Product = {
     interestPerYear: number | null;
     rating: number;
     reviews: number;
+    freeShipping: boolean | null;
 
 }
 
@@ -40,11 +41,12 @@ export class App extends React.Component {
                 description: RandomTexts[Math.floor(Math.random() * RandomTexts.length)],
                 rentalPrice: Math.random() > 0.5 ? parseFloat((Math.random() * 1000).toFixed(2)) : null,
                 image: `https://picsum.photos/seed/${i + 1}/300/200`,
-                stock: Math.floor(Math.random() * 100),
-                top: Math.random() > 0.5 ? parseFloat((Math.random() * 100).toFixed(2)) : null,
+                stock: Math.random() > 0.5 ? Math.floor(Math.random() * 100) : 0,
+                top: Math.random() > 0.5 ? parseFloat((Math.random() * 100).toFixed(0)) : null,
                 interestPerYear: Math.random() > 0.5 ? parseFloat((Math.random() * 20).toFixed(2)) : null,
                 rating: parseFloat((Math.random() * 5).toFixed(1)),
                 reviews: Math.floor(Math.random() * 1000),
+                freeShipping: Math.random() > 0.5,
             });
         }
         return products;
@@ -61,7 +63,20 @@ export class App extends React.Component {
             <div className="container">
                 {this.products.map((product, index) => (
                     <div key={index} className="product-card">
-                        <img src={product.image} alt={product.name} className="product-image" />
+                        <div className="product-header">
+                            <div className="product-tags">
+                                {product.top && <span className="product-tag_top">Top {product.top}</span>}
+                                {product.interestPerYear &&
+                                    <div className="product-tag_interest">
+                                        <span className="product-tag_interest-text">Urok</span>
+                                        <span className="product-tag_interest-text">{product.interestPerYear}<span>%</span></span>
+                                        <span className="product-tag_interest-text">p. a.</span>
+                                    </div>
+                                }
+                            </div>
+                            {product.freeShipping && <div className="product-badge_free-shipping"><span className="product-badge_free-shipping-text">doruceni zdarma<br />alzaboxy i prodejny</span></div>}
+                            <img src={product.image} alt={product.name} className="product-image" />
+                        </div>
                         <h2 className="product-name">{product.name}</h2>
                         <p className="product-description">{product.description}</p>
                         <p className="product-price">Price: ${product.price}</p>
